@@ -4,12 +4,11 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$mailheader = "From:".$name."<".$email.">\r\n";
+$mailheader .= "From:".$name."<".$email.">\r\n";
 
 $recipient = "paulaolimpia15@yahoo.com";
 
-mail($recipient, $subject, $message, $mailheader)
-or die("Error!");
+mail($recipient, $subject, $message, $mailheader) or die("Error!");
 
 echo '<!DOCTYPE html>
 <html lang="en">
