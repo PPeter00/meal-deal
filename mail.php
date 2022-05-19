@@ -8,7 +8,7 @@ $mailheader .= "From:".$name."<".$email.">\r\n";
 
 $recipient = "paulaolimpia15@yahoo.com";
 
-mail($recipient, $subject, $message, $mailheader) or die("Error!");
+if(mail($recipient, $subject,$message, $mailheader)){
 
 echo '<!DOCTYPE html>
 <html lang="en">
@@ -37,3 +37,6 @@ echo '<!DOCTYPE html>
     </div>
 </body>
 </html>';
+}else{
+    echo "Email send failed...!";
+}
