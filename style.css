@@ -439,7 +439,6 @@ p {
 .footer a i:hover {
     color: var(--secondary-color);
 }
-
 .footer a i {
     font-size: 1.5rem;
     color: #fff;
